@@ -332,23 +332,23 @@ SETUP:
 INSTALL JAVA: amazon-linux-extras install java-openjdk11 -y
 
 STEP-1: DOWNLOAD TOMCAT (dlcdn.apache.org)
-wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.83/bin/apache-tomcat-9.0.83.tar.gz
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.85/bin/apache-tomcat-9.0.83.tar.gz
 
 STEP-2: EXTRACT THE FILES
-tar -zxvf apache-tomcat-9.0.83.tar.gz
+tar -zxvf apache-tomcat-9.0.85.tar.gz
 
 STEP-3: CONFIGURE USER, PASSWORD & ROLES
-vim apache-tomcat-9.0.83/conf/tomcat-users.xml
+vim apache-tomcat-9.0.85/conf/tomcat-users.xml
 
  56   <role rolename="manager-gui"/>
  57   <role rolename="manager-script"/>
  58   <user username="tomcat" password="raham123" roles="manager-gui, manager-script"/>
 
 STEP-4: DELETE LINE 21 AND 22
-vim apache-tomcat-9.0.83/webapps/manager/META-INF/context.xml
+vim apache-tomcat-9.0.85/webapps/manager/META-INF/context.xml
 
 STEP-5: STARTING TOMCAT
-sh apache-tomcat-9.0.83/bin/startup.sh
+sh apache-tomcat-9.0.85/bin/startup.sh
 
 CONNECTION:
 COPY PUBLIC IP:8080 
